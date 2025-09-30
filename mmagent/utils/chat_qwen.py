@@ -41,7 +41,7 @@ def get_response(messages):
             processing_config["ckpt"],
             torch_dtype="auto",
             device_map="auto",
-            attn_implementation="flash_attention_2",
+            attn_implementation="eager",  # Use standard attention instead of flash_attention_2
         )
         thinker.eval()
         processor = Qwen2_5OmniProcessor.from_pretrained(processing_config["ckpt"])
@@ -64,7 +64,7 @@ def get_response(messages):
     del generation
     del generate_ids
     del inputs
-    torch.cuda.empty_cache()
+    # torch.cuda.empty_cache()  # Skip CUDA cache clear on CPU
     
     return response, token_count
 

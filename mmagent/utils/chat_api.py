@@ -36,11 +36,18 @@ try:
     config = json.load(open("configs/api_config.json"))
     client = {}
     for model_name in config.keys():
-        client[model_name] = openai.AzureOpenAI(
-            azure_endpoint=config[model_name]["azure_endpoint"],
-            api_version=config[model_name]["api_version"],
-            api_key=config[model_name]["api_key"],
-        )
+        if config[model_name].get("base_url") and config[model_name].get("api_key"):
+            if "azure" in config[model_name].get("base_url", "").lower():
+                client[model_name] = openai.AzureOpenAI(
+                    azure_endpoint=config[model_name]["azure_endpoint"],
+                    api_version=config[model_name]["api_version"],
+                    api_key=config[model_name]["api_key"],
+                )
+            else:
+                client[model_name] = openai.OpenAI(
+                    base_url=config[model_name]["base_url"],
+                    api_key=config[model_name]["api_key"],
+                )
 except:
     pass
 

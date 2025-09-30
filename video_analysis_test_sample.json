@@ -1,0 +1,18 @@
+{
+  "video_path": "data/videos/test_sample.mp4",
+  "model": "Qwen/Qwen2.5-Omni-7B",
+  "processing_method": "native_pytorch",
+  "frames_extracted": 71,
+  "faces_detected": 0,
+  "speakers_detected": 0,
+  "has_audio": true,
+  "video_context_generated": true,
+  "results": {
+    "question_1": {
+      "question": "What happens in this video?",
+      "answer": "In the video, two individuals are are in a dimly lit outdoor setting, possibly a garden or patio area. The scene is illuminated by soft, ambient lighting, creating a serene and intimate atmosphere. One person is standing on the left side of the frame, while the other person is on the right side. The person on the right appears to be engaged in a conversation or interaction with the other person, as they are gesturing with their hands. The background features some plants and a building with windows, adding to the cozy and relaxed ambiance of the setting.",
+      "tokens": 2838,
+      "video_context_included": true
+    }
+  }
+}

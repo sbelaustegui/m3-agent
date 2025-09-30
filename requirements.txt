@@ -6,6 +6,6 @@ scikit-learn
 tqdm 
 openai 
 moviepy
-httpx==0.23.0
+httpx>=0.25.0
 
 # python==3.9.2

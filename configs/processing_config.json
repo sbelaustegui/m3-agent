@@ -22,9 +22,9 @@
     "input_dir": "data/video_clips",
     "max_parallel_videos": 32,
     "log_dir": "logs",
-    "temperature": 1e-6,
+    "temperature": 1e-06,
     "train": true,
-    "ckpt": "models/M3-Agent-Memorization",
+    "ckpt": "Qwen/Qwen2.5-Omni-7B",
     "model": "qwen2.5-omni",
     "total_round": 5,
     "batch_size": 64
