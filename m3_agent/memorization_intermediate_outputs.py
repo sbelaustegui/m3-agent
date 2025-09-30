@@ -69,7 +69,7 @@ def streaming_process_video(sample):
     # Process each interval
     clips = glob.glob(sample["clip_path"] + "/*")
     for clip_path in clips:
-        clip_id = int(clip_path.split("/")[-1].strip(".mp4"))
+        clip_id = int(clip_path.split("/")[-1].split(".")[0])
         base64_video, base64_frames, base64_audio = process_video_clip(clip_path)
 
         # Process frames for this interval

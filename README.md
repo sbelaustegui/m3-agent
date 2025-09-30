@@ -136,7 +136,7 @@ python m3_agent/memorization_intermediate_outputs.py \
 
    **This step uses the M3-Agent-Memorization model to generate memory graphs.**
 
-   - Download M3-Agent-Memorization from [huggingface](https://huggingface.co/datasets/ByteDance-Seed/M3-Bench/tree/main/videos/robot)
+   - Download M3-Agent-Memorization from [huggingface](https://huggingface.co/ByteDance-Seed/M3-Agent-Memorization)
 
 ```bash
 python m3_agent/memorization_memory_graphs.py \
@@ -166,7 +166,7 @@ pip install numpy==1.26.4
 
    **This step uses the M3-Agent-Control model to generate answer and the GPT-4o to evaluate the answer.**
 
-   - Download M3-Agent-Control from [huggingface](https://huggingface.co/datasets/ByteDance-Seed/M3-Bench/blob/main/videos/robot)
+   - Download M3-Agent-Control from [huggingface](https://huggingface.co/ByteDance-Seed/M3-Agent-Control)
 
 ```bash
 python m3_agent/control.py \
